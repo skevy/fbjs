@@ -68,7 +68,6 @@ gulp.task('lib', function() {
 gulp.task('flow', function() {
   return gulp
     .src(paths.lib.src)
-    .pipe(gulpStripProvidesModule())
     .pipe(flatten())
     .pipe(rename({extname: '.js.flow'}))
     .pipe(gulp.dest(paths.lib.dest));
